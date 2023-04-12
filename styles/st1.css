@@ -1,0 +1,37 @@
+.col1 {
+    color: gray;
+}
+
+.col2 {
+    color: brown;
+}
+
+.size1 {
+    font-size: 2em;
+}
+
+.sty1 {
+    font-style: italic;
+}
+
+.under1 {
+    text-decoration: underline;
+}
+/* type選取器 */
+h1 {
+    color: aqua;
+}
+/* class選取器 */
+.st1 {
+    color: gray;
+}
+/* id選取器 */
+#theH1 {
+    color: blueviolet;
+}
+
+.p {
+    color:darkblue;
+    font-size: 2em;
+    font-style: italic;
+}

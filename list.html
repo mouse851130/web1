@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- !enter即可做出網頁基本架構。 -->
+<html lang="zh-Hang-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清單元素</title>
+    <!-- <style>
+        a:link {
+            text-decoration: none;
+            color: darksalmon;
+        }
+
+        a:visited {
+            color: indigo;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: green;
+        }
+
+        a:active {
+            color: yellow;
+            font-size: 2em
+        }
+    </style> -->
+
+    <!-- 如果要只讓特定清單使用link，那就在style創造自己的選取器，如下 -->
+    <!-- 也可以使用list>li a:link...只是用>的話後面要加ul，因為>的意思是緊鄰的意思，list後面第一個接的是li，所以要加一個ul -->
+    <link rel="stylesheet" href="styles/border.css">
+    <style>
+        .list a:link {
+            text-decoration: none;
+            color: darksalmon;
+        }
+
+        .list a:visited {
+            color: indigo;
+        }
+
+        .list a:hover {
+            text-decoration: underline;
+            color: green;
+        }
+
+        .list a:active {
+            color: yellow;
+            font-size: 2em
+        }
+        
+        /* 設定清單樣式的屬性，使用list-style-type或list-style-image(圖片後面記得加url跟路徑) */
+        .list1 {
+            list-style-type: decimal-leading-zero;
+        }
+        .list2 {
+            list-style-type: none;
+            /* 要放圖片的話，要先把原本的屬性取消，不然疊上去很佔空間 */
+            list-style-image: url(images/arrow.png);
+        }
+
+        .in {
+            background-color: orange;
+            list-style-position: inside;
+        }
+
+        .out{
+            background-color: orange;
+            list-style-position: outside;
+        }
+        /* 這邊in跟out是讓清單前符號的位子放在格子裡或外(預設是outside) */
+
+        .border {
+            border: 3px dotted red;
+            border-radius: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ul>li*4>a -->
+    <a href="https://www.youtube.com/">youtube</a>
+    <a href="first.html">first</a>
+    <a href="list.html">list</a>
+    <a href="mailto:chou.no98@gmail.com">mail to me</a>
+
+    <ul class="list">
+        <!-- 可以使用ul>li*數量>a來快速製造跟超連結有關的選取器 -->
+        <!-- ul後面加class選取器就可以使用特定的class -->
+        <li><a href="https://shopping.pchome.com.tw/">pchome首頁</a></li>
+        <li><a href="https://www.youtube.com/">關於</a></li>
+        <li><a
+                href="https://reurl.cc/9V4G4n">最新新聞</a>
+        </li>
+        <li><a href="mailto:chou.no98@gmail.com">客服</a></li>
+    </ul>
+    <h2>新聞</h2>
+    <a href="https://www.youtube.com/">youtube</a>
+    <!-- 連到內部網頁：以同一個儲存路徑的first跟list為例：直接打檔名即可 -->
+    <a href="first.html">first</a>
+    <a href="hyperlink.html">hyperlink</a>
+    <!-- 要注意同一個網域(內部網域)的儲存路徑需相同，參見web1的路徑說明圖片 -->
+    <a href="mailto:chou.no98@gmail.com">mail to me</a>
+    <!-- ul>li*數量即可快速製作清單 -->
+    <!-- 1.unordered list 沒有順序的排列 -->
+    <ul style="background-color: yellow;">
+        <li style="background-color: green;">國際</li>
+        <li style="background-color: gray;">運動
+            <ol>
+                <li>羽球</li>
+                <li>籃球</li>
+                <li>排球</li>
+            </ol>
+        </li>
+        <li>娛樂</li>
+        <li>氣象</li>
+    </ul>
+
+    <h2>訓練課程</h2>
+    <ul class="list1 border">
+        <li>就業養成班
+            <ol class="list2">
+                <li class="in">全方位應用程式設計師</li>
+                <li>Java程式設計師</li>
+                <li class="out">網路多媒體設計師</li>
+            </ol>
+        </li>
+        <li>軟體設計精修班</li>
+
+    </ul>
+
+    <!-- 2.ordered list 有照順序的排列 -->
+    <!-- ol>li*數量，>符號是緊鄰在後的意思 -->
+    <h2>一年A班期中考排名</h2>
+    <ol>
+        <li>陳小華</li>
+        <li>王小明</li>
+        <li>林小廷</li>
+        <li>邱小諾</li>
+        <li>馬小九</li>
+    </ol>
+    <!-- 3.定義清單definition list -->
+    <h2>櫻花鉤吻鮭</h2>
+    <!-- 也可以使用dl>(dt+dd)*想要的清單數量 -->
+    <dl>
+        <dt>學名：</dt>
+        <dd>Oncorhynchus masou formosanus</dd>
+        <dt>俗名：</dt>
+        <dd>又稱
+            <ul>
+                <li>台灣鮭魚</li>
+                <li>台灣鱒</li>
+                <li>次高鱒</li>
+                <li>台灣山女</li>
+                <li>次高山女</li>
+                <li>Taiwan Yamame</li>
+                <!-- 可以在定義清單內新增清單，不過只能放在清單項目說明<dd>裡面 -->
+            </ul>
+        </dd>
+        <dt>分類：</dt>
+        <dd>脊索動物門、條鰭魚綱</dd>
+        <dd>鮭形目、鮭科</dd>
+        <dt>特色：</dt>
+        <dd>台灣櫻花鉤吻鮭成魚約莫30公分長。基本體色如深綠松石，腹部銀色。沿身體兩側有9個垂直橢圓形的深色斑點和11到13個較小的黑點。<br>在交配季節，雄性的身體側面變成深紅色。嘴寬，延伸到眼睛下方，其狀如鉤。</dd>
+    </dl>
+</body>
+
+</html>

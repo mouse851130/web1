@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display.visibility.overflow 樣式</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .list {
+            background-color: aqua;
+            overflow: auto;
+        }
+
+        /* 打成list li可以直接對list裡面的li做修改 */
+        .list li {
+            width: 7em;
+            float: left;
+            border-right: 1px solid black;
+            list-style-type: none;
+            line-height: 3;
+        }
+
+        .list li a {
+            text-align: center;
+            display: block;
+            /* 要使用display的block屬性值讓本來被視為是inline元素的連結方塊變成block */
+            /* 這樣才能讓文字的置中效果呈現出來，點選超連結時才能整塊背景被反白 */
+            text-decoration: none;
+
+        }
+
+        .list li a:hover {
+            color: white;
+            background-color: #F1E1FF;
+        }
+
+        h1 {
+            background-color: yellow;
+            /* visibility把東西隱藏，但仍占有空間 */
+            /* visibility: hidden; */
+            display: none;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 150px;
+            border: 5px solid gold;
+            /* overflow為設定容器元件顯示方法，一般使用auto以自動拉下 */
+            overflow: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>這是h1</h1>
+
+    <!-- 現在要把超連結樣式從預設的垂直list改成水平list -->
+    <!-- 這樣做完就是一個網站的導覽列了 -->
+    <!-- 剛好也是HTML5新元素的nav -->
+    <nav>
+        <ul class="list">
+            <li><a href="https://shopping.pchome.com.tw/">pchome首頁</a></li>
+            <li><a href="https://www.youtube.com/">關於</a></li>
+            <li><a href="https://reurl.cc/9V4G4n">最新新聞</a></li>
+            <li><a href="mailto:chou.no98@gmail.com">客服</a></li>
+        </ul>
+    </nav>
+    
+    <h2>這是h2，上面h1是否存在</h2>
+    <h2 class="box1">aaaaaaaaaaaaaaaaaaaaaaaaaaaa這是h1這是h1這是h1這是h1這是h1這是h1這是h1這是h1這是h1這是h1這是h1</h2>
+</body>
+
+</html>

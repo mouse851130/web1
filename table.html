@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+
+    <style>
+        .table1 {
+            width: 400px;
+            border: 3px solid black;
+            /* border-collapse: collapse; */
+            border-radius: 20px;
+            border-spacing: 0;
+        }
+
+        th,
+        td {
+            width: 400px;
+            border: 1px solid green;
+            text-align: center;
+        }
+
+        thead {
+            background-color: aqua;
+        }
+
+        tbody {
+            background-color: yellow;
+        }
+
+        tbody tr:nth-child(2n) {
+            background-color: lightblue;
+        }
+
+        tbody tr:nth-child(2n+1) {
+            background-color: blue;
+        }
+
+        tbody tr:hover {
+            background-color: #D8D8EB;
+        }
+
+        tr:first-child th:first-child {
+            border-top-left-radius: 17px;
+        }
+
+        tr:first-child th:last-child {
+            border-top-right-radius: 17px;
+        }
+
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 17px;
+        }
+
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 17px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 在有指定高度的情況下，行高line-height要跟div方塊的height一樣 -->
+    <div style="width:100px; height: 100px; border: 2px solid green; line-height: 100px;">有指定高度</div>
+    <hr>
+    <div style="width: 100px; border: 2px solid blue; padding-top: 50px; padding-bottom: 50px;">不指定高度</div>
+    <!-- 在不指定高度的情況下，div方塊看起來會比較高，因為要加上文字本身的大小。 -->
+
+    <table class="table1">
+        <caption>
+            <h2 style="text-decoration: underline;">表格練習</h2>
+        </caption>
+        <thead>
+            <tr>
+                <th>col1</th>
+                <!-- 合併儲存格要把後面被合併的儲存格刪掉或註解掉 -->
+                <th>col2</th>
+                <th>col3</th>
+                <th>col4</th>
+            </tr>
+            <tr>
+                <th colspan="2">col1</th>
+                <!-- 合併儲存格要把後面被合併的儲存格刪掉或註解掉 -->
+                <!-- <td>col2</td> -->
+                <th colspan="2">col3</th>
+                <!-- <th>col4</th> -->
+            </tr>
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="4">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <!-- <td>3</td> -->
+            <td>4</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <!-- <td>3</td> -->
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <!-- <td>3</td> -->
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <table style="width: 400px;">
+        <tr style="background-color: gray;">
+            <th>col1</th>
+            <th>col2</th>
+            <th>col3</th>
+            <th>col4</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

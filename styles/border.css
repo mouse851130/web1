@@ -1,0 +1,44 @@
+.list a:link {
+    text-decoration: none;
+    color: darksalmon;
+}
+
+.list a:visited {
+    color: indigo;
+}
+
+.list a:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+.list a:active {
+    color: yellow;
+    font-size: 2em
+}
+
+/* 設定清單樣式的屬性，使用list-style-type或list-style-image(圖片後面記得加url跟路徑) */
+.list1 {
+    list-style-type: decimal-leading-zero;
+}
+.list2 {
+    list-style-type: none;
+    /* 要放圖片的話，要先把原本的屬性取消，不然疊上去很佔空間 */
+    list-style-image: url(images/arrow.png);
+}
+
+.in {
+    background-color: orange;
+    list-style-position: inside;
+}
+
+.out{
+    background-color: orange;
+    list-style-position: outside;
+}
+/* 這邊in跟out是讓清單前符號的位子放在格子裡或外(預設是outside) */
+
+.border {
+    border: 3px dotted red;
+    border-radius: 20px;
+}

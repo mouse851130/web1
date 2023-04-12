@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form表單</title>
+    <style>
+        .st1 {
+            width: 450px;
+            border-bottom: 3px dashed #8600FF;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .st2 {
+            width: 450px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .tag1 {
+            width: 100px;
+            float: left;
+            text-align: right;
+            /* border: 2px solid red; */
+            padding: 3px;
+        }
+
+        .fieldset1 {
+            width: 500px;
+            margin: 15px;
+            background-color: #DFFFDF;
+            border: 3px solid black;
+            border-radius: 20px;
+        }
+
+        .legend1 {
+            color: #000000;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get" enctype="multipart/form-data">
+        <!-- form裡面要有一些基礎屬性，如action、method跟enctype -->
+
+        <fieldset class="fieldset1">
+            <legend class="legend1">個人資訊一<strong>必填</strong></legend>
+            <div class="st1">
+                <!-- 使用div而不是br做分行效果，這樣每一格才是一個block，可以用border去調整 -->
+                <!-- 使用label元素去讓本來在意見欄下面的文字去對齊 -->
+                <label class="tag1" for="name1">姓名:</label><input type="text" id="name1" name="account" size="8"
+                    placeholder="guest" autocomplete="off" autofocus>
+                <!-- label只放要動的字後面 -->
+                <!-- for要跟後面id的字一樣，這樣才能在點選字時自動連接到對應的id，才能做出點選文字就會自動到框內的效果 -->
+            </div>
+            <div class="st1">
+                <label class="tag1" for="pwd1">密碼:</label><input type="password" id="pwd1" name="pwd" maxlength="6">
+            </div>
+
+            <div class="st1">
+                <label class="tag1">性別:</label>
+                <label>
+                    <input type="radio" name="gender" value="male">男性
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female">女性
+                </label>
+            </div>
+
+            <!-- 使用html5新元素製作生日：date -->
+            <div class="st1">
+                <label for="birth1" class="tag1">生日:</label> <input type="date" name="birth" value="2000-01-01">
+                <!-- 預設一個起始日期：使用value跟label連結 -->
+            </div>
+
+            <div class="st1">
+                <label for="" class="tag1">信箱:</label> <input type="email" name="email" id="">
+            </div>
+
+            <!-- 使用pattern模式對輸入的內容作篩選：以身分證字號為例 -->
+            <div class="st1">
+                <label for="" class="tag1">身分證字號：</label><input type="text" name="idcode" id="" maxlength="10"
+                    pattern="[a-z,A-Z]{1}[1-2,8-9]{1}\d{8}">
+                <!-- 大括號內dash是連續的意思(a到z、A到Z)，後面中括號1是只能填一個的意思，\d是數字1-9的意思 -->
+                <!-- 8.9開頭表示新住民 -->
+            </div>
+
+        </fieldset>
+
+        <fieldset class="fieldset1">
+            <legend class="legend1">地址</legend>
+            <div class="st1">
+                <label for="" class="tag1">城市：</label>
+                <select name="city" size="2">
+                    <!-- size表示選單一次要出現多少選項 -->
+                    <option value="sec">請選擇</option>
+                    <option value="TPE">台北市</option>
+                    <option value="TPU">新北市</option>
+                    <option value="TYU">桃園市</option>
+                    <option value="HSC">新竹市</option>
+                </select>
+            </div>
+
+            <div class="st1">
+                <label for="address1" class="tag1">完整地址:</label><input type="text" name="address" id="address1"
+                    size="30">
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset1">
+            <legend class="legend1">個人資訊二</legend>
+            <div class="st1">
+                <label for="" class="tag1"> 個人照片:</label><input type="file" name="picture" id="user's picture" multiple>
+            </div>
+
+            <div class="st1">
+                <label class="tag1">興趣:</label>
+                <label>
+                    <input type="checkbox" name="hobby" value="music">音樂
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="sports">運動
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="reading">閱讀
+                </label>
+            </div>
+
+            <!-- 製作datalist清單 -->
+            <div class="st1">
+                <label for="" class="tag1">喜歡的水果:</label><input type="text" name="fruit" list="fruits" id="">
+                <datalist id="fruits">
+                    <!-- datalist要跟前面的標籤label連結必須加id，跟前面list裡面的值相同 -->
+                    <option value="Apple">蘋果</option>
+                    <option value="Grape"></option>
+                    <option value="Banana">
+                        <!-- 三種寫法都對 -->
+                </datalist>
+            </div>
+
+            <div class="st1">
+                <label class="tag1" for="comment1">意見:</label><textarea cols="30" rows="5" id="comment1" name="comment"
+                    readonly>中華民國數位發展部（以下簡稱本部）係依據本服務條款提供本站各項服務。當您註冊完成或開始使用本服務時，即表示您已閱讀、了解並同意接受本服務條款之所有內容。</textarea>
+            </div>
+        </fieldset>
+        <div class="st2">
+            <input type="submit" value="送出">
+            <input type="reset" value="清除" disabled>
+        </div>
+    </form>
+</body>
+
+</html>

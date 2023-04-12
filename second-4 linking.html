@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css的使用-外掛linking</title>
+    <!-- 可以直接在head加style，這樣後面合的就可以直接修改 -->
+    <link rel="stylesheet" href="styles/st1.css">
+    <!-- 在head欄位使用link標籤，連結自己的選取器 -->
+    <style>
+        /* 先在這邊建立選取器清單，這樣後面就可以套用 */
+        /* .col1 {
+            color: gray;
+        }
+
+        .col2 {
+            color: brown;
+        }
+
+        .size1 {
+            font-size: 2em;
+        }
+
+        .sty1 {
+            font-style: italic;
+        }
+
+        .under1 {
+            text-decoration: underline;
+        } */
+        /* type選取器 */
+        /* h1 {
+            color: aqua;
+        } */
+        /* class選取器 */
+        /* .st1 {
+            color: gray;
+        } */
+        /* id選取器 */
+        /* #theH1 {
+            color: blueviolet;
+        } */
+        p {
+            color: gold;
+            font-size: 3em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 命令優先順訊：直接寫入style>id選取器>class(.st1)>type(h1) -->
+    <h1 style= color:green class="st1" id="theH1">apple</h1>
+    <h2 class="st2">banana</h2>
+    <h2 class="st1">orange</h2>
+    <h3 class="st2">grape</h3>
+    <h3 class="col1 size1 sty1">panada</h3>
+    <h3 class="col2 size1 under1">monkey</h3>
+    <p class="p">This is a paragraph</p>
+</body>
+
+</html>

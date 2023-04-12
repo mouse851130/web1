@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css的使用-class選取器</title>
+    <!-- 可以直接在head加style，這樣後面府合的就可以直接修改 -->
+
+    <!-- 利用外部字體，記得google font的link連結只要複製後面兩個就好 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/st1.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+
+    <!-- 利用一個外掛css檔可以把所有的外掛樣式表全部集中，這樣之後便可以只輸入一個外掛樣式表 -->
+    <link rel="stylesheet" href="styles/link.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <!-- 上面這行是預覽 -->
+    <style>
+        /* import元素要放style第一行 */
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+
+        /* 講義第111頁的字體變更，使用@font-face(src後面url不可省略) */
+        @font-face {
+            src: url(fonts/JustOldFashion.ttf);
+            font-family: font1;
+            /* 利用font-family替字型取名 */
+        }
+
+        /* 替字型做選取器 */
+        .font1 {
+            font-family: font1;
+        }
+
+        @font-face {
+            src: url(fonts/SCRIPTIN.ttf);
+            font-family: font2
+        }
+
+        .font2 {
+            font-family: font2;
+        }
+
+        .p1 {
+            font-family: 'Tilt Warp', cursive;
+        }
+
+        .st1 {
+            color: green;
+            text-transform: capitalize;
+        }
+
+        /* 只讓特定標籤使用的話，在類別前加標籤即可 */
+        /* ex:.st1 {
+            color: green;
+            text-transform: capitalize;
+        } 可以使用看看*/
+        .st2 {
+            color: orange;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 class="st1 font1">apple</h1>
+    <h2 class="st2 font2">banana</h2>
+    <h2 class="st1 font1">orange</h2>
+    <h3 class="st2 font2">grape</h3>
+    <h1 class="st2 p1">This is a paragraph</h1>
+</body>
+
+</html>

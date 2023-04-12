@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hang-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-model</title>
+    <style>
+        /* padding就是圖片跟邊框的距離，margin是邊框跟網頁邊緣的距離 */
+        img {
+            border:5px double red;
+            padding: 10px;
+            margin: 5px;
+
+        }
+        /* float是讓元素可以浮動，浮動到左邊或右邊 */
+        /* 但後面的元素就會自己填補上面的空缺，所以若下面的元素不想往上的話就要使用clear屬性 */
+        .float1 {
+            float: left;
+        }
+        .float2{
+            float: right;
+        }
+
+        p{
+            clear: both;
+        }
+
+        .float3 {
+            float: left;
+            border: thick double blue;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>不放棄每個打席 吳念庭開轟記得爸爸的話</h1>
+    <img class="float3" src="p2.webp" width="500">
+    <img class="float2" src="p2.webp" width="500">
+    
+    <p>
+        台灣隊8日在經典賽首戰以5比12不敵巴拿馬，其中吳念庭堪稱陣中最火燙打者，不僅單場3打數3安打，還敲出本屆經典賽首支全壘打。他透露，雖然陷入大幅度落後，但休息室氣氛都是不想放棄每個打席。
+    </p>
+    <p>
+        台灣隊8日在經典賽首戰以5比12不敵巴拿馬，其中吳念庭堪稱陣中最火燙打者，不僅單場3打數3安打，還敲出本屆經典賽首支全壘打。他透露，雖然陷入大幅度落後，但休息室氣氛都是不想放棄每個打席。
+    </p>    <p>
+        台灣隊8日在經典賽首戰以5比12不敵巴拿馬，其中吳念庭堪稱陣中最火燙打者，不僅單場3打數3安打，還敲出本屆經典賽首支全壘打。他透露，雖然陷入大幅度落後，但休息室氣氛都是不想放棄每個打席。
+    </p>    <p>
+        台灣隊8日在經典賽首戰以5比12不敵巴拿馬，其中吳念庭堪稱陣中最火燙打者，不僅單場3打數3安打，還敲出本屆經典賽首支全壘打。他透露，雖然陷入大幅度落後，但休息室氣氛都是不想放棄每個打席。
+    </p>
+</body>
+</html>
